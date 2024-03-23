@@ -1,0 +1,54 @@
+1. Инициализировать проект +  
+2. Установить необходимые зависимости +
+3. Проработать модели проекта + 
+      initialValue: Receipt[] = [];
+
+      interface IReceipt {
+        id: number,
+        name: string,
+        createdDate: Date,
+        totalPrice: number,
+        positions: ReceiptPosition[],
+      };
+
+      interface IReceiptPosition {
+        id: number,
+        positionId: number,
+        remainingCount: number,
+        totalCount: number,
+      };
+
+      interface IReceiptPart {
+        id: number,
+        receiptId: number,
+        positions: ReceiptPartPosition[],
+        totalPrice: number,
+      };
+
+      interface IReceiptPartPosition {
+        id: number,
+        positionId: number,
+        totalCount: number,
+      }
+
+      interface IPosition {
+        id: number,
+        name: string,
+        price: number,
+      };
+
+4. Проработать логику приложения:
+- создавать чек
+- удалять чек
+- изменять чек
+- добавлять позиции к чеку
+- редактировать позиции
+- удалять позиции
+- создать функцию для расчета totalPrice у чека
+- создавать ReceiptPart
+- изменять ReceiptPart
+- удалять ReceiptPart
+- распределять позиции между ReceiptPart
+- менять количество позиции внутри ReceiptPart
+
+5. UI/UX дизайн приложения
